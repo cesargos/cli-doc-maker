@@ -1,0 +1,1907 @@
+{
+	"info": {
+		"_postman_id": "8b773a36-0520-4546-9fd1-a610833ea3ae",
+		"name": "Smarkio - Produto VIDA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Folder",
+			"item": [
+				{
+					"name": "ObterListaParcela HML",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3e724b4d-c112-40f8-a596-e20a02fbc199",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer 50fb7e62-6b89-4e11-9451-e49f1b40ea3f"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"obterListaParcela\": {\r\n    \"mostraContador\": true,\r\n    \"codigoSusep\": \"3585CJ\",\r\n    \"todasSuseps\": true,\r\n    \"restricoes\": [\r\n      {\r\n        \"nomeAtributo\": \"codigoTipoConsulta\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"D\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"codigoSucursal\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"21\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"codigoRamo\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"1391\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"numeroDigitoApolice\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"346099\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"origemBusca\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"VIDA_INDIVIDUAL\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"hostBCP\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"washmlcorp\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"quantidadeMaximaParcela\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 249\r\n      }\r\n    ],\r\n    \"produtosPapeisContratos\": {\r\n      \"papeisProduto\": [\r\n        {\r\n          \"papelContrato\": 8,\r\n          \"produto\": 43\r\n        },\r\n        {\r\n          \"papelContrato\": 8,\r\n          \"produto\": 17\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 11\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 27\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 1\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 2\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 3\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 4\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 5\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 6\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 7\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 8\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 9\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 10\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 13\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 14\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 15\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 16\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 35\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 32\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 34\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 39\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 33\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 61\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 38\r\n        },\r\n        {\r\n          \"produto\": 72,\r\n          \"papelContrato\": 1\r\n        },\r\n        {\r\n          \"produto\": 116,\r\n          \"papelContrato\": 1\r\n        }\r\n      ]\r\n    },\r\n    \"empresa\": {\r\n      \"empresas\": [\r\n        1,\r\n        14,\r\n        17\r\n      ]\r\n    }\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://hml.portoseguro.com.br/apifinanceiro/financeiro/v1/contratos/obterListaParcela-prd",
+							"protocol": "https",
+							"host": [
+								"hml",
+								"portoseguro",
+								"com",
+								"br"
+							],
+							"path": [
+								"apifinanceiro",
+								"financeiro",
+								"v1",
+								"contratos",
+								"obterListaParcela-prd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sucesso",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"codigoEmpresa\": \"<string>\",\n    \"operacaoPrincipal\": \"<string>\",\n    \"subOperacao\": \"<string>\",\n    \"numeroCartao\": \"<string>\",\n    \"validadeCartao\": \"<string>\",\n    \"contratoComercial\": \"<string>\",\n    \"quantidadeParcelas\": \"<string>\",\n    \"valor\": \"<number>\",\n    \"cvv\": \"<string>\",\n    \"numeroEndosso\": \"<string>\",\n    \"numeroParcela\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/autorizacao/regularizarParcela",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"autorizacao",
+										"regularizarParcela"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"codigo\": \"<integer>\",\n \"mensagem\": \"<string>\",\n \"codigoGateway\": \"<integer>\",\n \"mensagemGateway\": \"<string>\"\n}"
+						},
+						{
+							"name": "Erro ao obter response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"codigoEmpresa\": \"<string>\",\n    \"operacaoPrincipal\": \"<string>\",\n    \"subOperacao\": \"<string>\",\n    \"numeroCartao\": \"<string>\",\n    \"validadeCartao\": \"<string>\",\n    \"contratoComercial\": \"<string>\",\n    \"quantidadeParcelas\": \"<string>\",\n    \"valor\": \"<number>\",\n    \"cvv\": \"<string>\",\n    \"numeroEndosso\": \"<string>\",\n    \"numeroParcela\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/autorizacao/regularizarParcela",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"autorizacao",
+										"regularizarParcela"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"codigo\": \"<integer>\",\n \"mensagem\": [\n  \"<string>\",\n  \"<string>\"\n ]\n}"
+						},
+						{
+							"name": "ObterListaParcela",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer 50fb7e62-6b89-4e11-9451-e49f1b40ea3f"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"obterListaParcela\": {\r\n    \"mostraContador\": true,\r\n    \"codigoSusep\": \"COL10J\",\r\n    \"todasSuseps\": true,\r\n    \"restricoes\": [\r\n      {\r\n        \"nomeAtributo\": \"codigoTipoConsulta\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"D\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"codigoSucursal\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 1\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"codigoRamo\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 1391\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"numeroDigitoApolice\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 161438\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"origemBusca\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"VIDA_INDIVIDUAL\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"hostBCP\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"washmlcorp\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"quantidadeMaximaParcela\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 249\r\n      }\r\n    ],\r\n    \"produtosPapeisContratos\": {\r\n      \"papeisProduto\": [\r\n        {\r\n          \"papelContrato\": 8,\r\n          \"produto\": 43\r\n        },\r\n        {\r\n          \"papelContrato\": 8,\r\n          \"produto\": 17\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 11\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 27\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 1\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 2\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 3\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 4\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 5\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 6\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 7\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 8\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 9\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 10\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 13\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 14\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 15\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 16\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 35\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 32\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 34\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 39\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 33\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 61\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 38\r\n        },\r\n        {\r\n          \"produto\": 72,\r\n          \"papelContrato\": 1\r\n        },\r\n        {\r\n          \"produto\": 116,\r\n          \"papelContrato\": 1\r\n        }\r\n      ]\r\n    },\r\n    \"empresa\": {\r\n      \"empresas\": [\r\n        1,\r\n        14,\r\n        17\r\n      ]\r\n    }\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://hml.portoseguro.com.br/apifinanceiro/financeiro/v1/contratos/obterListaParcela",
+									"protocol": "https",
+									"host": [
+										"hml",
+										"portoseguro",
+										"com",
+										"br"
+									],
+									"path": [
+										"apifinanceiro",
+										"financeiro",
+										"v1",
+										"contratos",
+										"obterListaParcela"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "AcessoDadosId",
+									"value": "GIWsrvclnApps01.112959"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en-US"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "910"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Jun 2021 14:56:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Porto Seguro"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"retorno\": {\n        \"codigo\": \"1\",\n        \"mensagem\": \"OK\",\n        \"parcela\": {\n            \"codigoFormaPagamento\": \"41\",\n            \"formatoMoeda\": \"R$\",\n            \"numeroDigitoPev\": \"0\",\n            \"vigenciaFinal\": \"2022-03-25T00:00:00-03:00\",\n            \"codigoProdutoBcp\": \"1391\",\n            \"dataEmissao\": \"2021-03-24T00:00:00-03:00\",\n            \"numeroDigitoEndosso\": \"235350\",\n            \"nomeFormaPagamento\": \"FRAC. 1A PARCELA CARNE\",\n            \"flagOrigemBusca\": \"L\",\n            \"codigoSusep\": \"COL10J\",\n            \"nomePessoa\": \"CAMILA TESTE DOIS COMISSÃO\",\n            \"numeroParcela\": \"1\",\n            \"numeroContratoSistemaOrigem\": \"1|1391|161438|\",\n            \"codigoSucursal\": \"1\",\n            \"numeroDigitoTitulo\": \"7011858203\",\n            \"codigoTipoEmissaoCobranca\": \"3\",\n            \"codigoEmpresa\": \"1\",\n            \"valorParcela\": \"46.40286\",\n            \"codigoRamo\": \"1391\",\n            \"numeroDigitoApolice\": \"161438\",\n            \"dataVencimento\": \"2021-05-15T00:00:00-03:00\",\n            \"numeroDigitoItem\": \"0\",\n            \"codigoTipoCobranca\": \"1\",\n            \"nomeProdutoBcp\": \"VIDA INDIVIDUAL\",\n            \"numeroDigitoSegurado\": \"100730120\",\n            \"codigoSituacaoParcela\": \"1\",\n            \"vigenciaInicial\": \"2021-03-26T00:00:00-03:00\",\n            \"valorIof\": \"0.17566\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "ObterListaParcela PROD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "31e7a8d8-d25b-446e-8021-141680307b89",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer 50fb7e62-6b89-4e11-9451-e49f1b40ea3f"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"obterListaParcela\": {\r\n    \"mostraContador\": true,\r\n    \"codigoSusep\": \"3585CJ\",\r\n    \"todasSuseps\": true,\r\n    \"restricoes\": [\r\n      {\r\n        \"nomeAtributo\": \"codigoTipoConsulta\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"D\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"codigoSucursal\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 21\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"codigoRamo\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 1391\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"numeroDigitoApolice\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 346099\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"origemBusca\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"VIDA_INDIVIDUAL\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"hostBCP\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"washmlcorp\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"quantidadeMaximaParcela\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 249\r\n      }\r\n    ],\r\n    \"produtosPapeisContratos\": {\r\n      \"papeisProduto\": [\r\n        {\r\n          \"papelContrato\": 8,\r\n          \"produto\": 43\r\n        },\r\n        {\r\n          \"papelContrato\": 8,\r\n          \"produto\": 17\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 11\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 27\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 1\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 2\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 3\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 4\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 5\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 6\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 7\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 8\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 9\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 10\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 13\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 14\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 15\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 16\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 35\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 32\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 34\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 39\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 33\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 61\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 38\r\n        },\r\n        {\r\n          \"produto\": 72,\r\n          \"papelContrato\": 1\r\n        },\r\n        {\r\n          \"produto\": 116,\r\n          \"papelContrato\": 1\r\n        }\r\n      ]\r\n    },\r\n    \"empresa\": {\r\n      \"empresas\": [\r\n        1,\r\n        14,\r\n        17\r\n      ]\r\n    }\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://wwws.portoseguro.com.br/apifinanceiro/financeiro/v1/contratos/obterListaParcela-prd",
+							"protocol": "https",
+							"host": [
+								"wwws",
+								"portoseguro",
+								"com",
+								"br"
+							],
+							"path": [
+								"apifinanceiro",
+								"financeiro",
+								"v1",
+								"contratos",
+								"obterListaParcela-prd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ObterListaParcela PROD não pretence a susep",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer 50fb7e62-6b89-4e11-9451-e49f1b40ea3f"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"obterListaParcela\": {\r\n    \"mostraContador\": true,\r\n    \"codigoSusep\": \"COL10J\",\r\n    \"todasSuseps\": true,\r\n    \"restricoes\": [\r\n      {\r\n        \"nomeAtributo\": \"codigoTipoConsulta\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"D\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"codigoSucursal\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 21\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"codigoRamo\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 1391\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"numeroDigitoApolice\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 346099\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"origemBusca\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"VIDA_INDIVIDUAL\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"hostBCP\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"washmlcorp\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"quantidadeMaximaParcela\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 249\r\n      }\r\n    ],\r\n    \"produtosPapeisContratos\": {\r\n      \"papeisProduto\": [\r\n        {\r\n          \"papelContrato\": 8,\r\n          \"produto\": 43\r\n        },\r\n        {\r\n          \"papelContrato\": 8,\r\n          \"produto\": 17\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 11\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 27\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 1\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 2\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 3\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 4\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 5\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 6\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 7\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 8\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 9\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 10\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 13\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 14\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 15\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 16\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 35\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 32\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 34\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 39\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 33\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 61\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 38\r\n        },\r\n        {\r\n          \"produto\": 72,\r\n          \"papelContrato\": 1\r\n        },\r\n        {\r\n          \"produto\": 116,\r\n          \"papelContrato\": 1\r\n        }\r\n      ]\r\n    },\r\n    \"empresa\": {\r\n      \"empresas\": [\r\n        1,\r\n        14,\r\n        17\r\n      ]\r\n    }\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://wwws.portoseguro.com.br/apifinanceiro/financeiro/v1/contratos/obterListaParcela-prd",
+									"protocol": "https",
+									"host": [
+										"wwws",
+										"portoseguro",
+										"com",
+										"br"
+									],
+									"path": [
+										"apifinanceiro",
+										"financeiro",
+										"v1",
+										"contratos",
+										"obterListaParcela-prd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "AcessoDadosId",
+									"value": "srvclnApps01.56919"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en-US"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 21 Jun 2021 16:19:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Gateway Porto"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"retorno\": {\n        \"codigo\": \"0\"\n    }\n}"
+						},
+						{
+							"name": "sucesso",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"codigoEmpresa\": \"<string>\",\n    \"operacaoPrincipal\": \"<string>\",\n    \"subOperacao\": \"<string>\",\n    \"numeroCartao\": \"<string>\",\n    \"validadeCartao\": \"<string>\",\n    \"contratoComercial\": \"<string>\",\n    \"quantidadeParcelas\": \"<string>\",\n    \"valor\": \"<number>\",\n    \"cvv\": \"<string>\",\n    \"numeroEndosso\": \"<string>\",\n    \"numeroParcela\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/autorizacao/regularizarParcela",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"autorizacao",
+										"regularizarParcela"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"codigo\": \"<integer>\",\n \"mensagem\": \"<string>\",\n \"codigoGateway\": \"<integer>\",\n \"mensagemGateway\": \"<string>\"\n}"
+						},
+						{
+							"name": "ObterListaParcela PROD",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer 50fb7e62-6b89-4e11-9451-e49f1b40ea3f"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"obterListaParcela\": {\r\n    \"mostraContador\": true,\r\n    \"codigoSusep\": \"3585CJ\",\r\n    \"todasSuseps\": true,\r\n    \"restricoes\": [\r\n      {\r\n        \"nomeAtributo\": \"codigoTipoConsulta\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"D\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"codigoSucursal\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 21\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"codigoRamo\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 1391\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"numeroDigitoApolice\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 346099\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"origemBusca\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"VIDA_INDIVIDUAL\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"hostBCP\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"washmlcorp\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"quantidadeMaximaParcela\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 249\r\n      }\r\n    ],\r\n    \"produtosPapeisContratos\": {\r\n      \"papeisProduto\": [\r\n        {\r\n          \"papelContrato\": 8,\r\n          \"produto\": 43\r\n        },\r\n        {\r\n          \"papelContrato\": 8,\r\n          \"produto\": 17\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 11\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 27\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 1\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 2\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 3\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 4\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 5\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 6\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 7\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 8\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 9\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 10\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 13\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 14\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 15\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 16\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 35\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 32\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 34\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 39\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 33\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 61\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 38\r\n        },\r\n        {\r\n          \"produto\": 72,\r\n          \"papelContrato\": 1\r\n        },\r\n        {\r\n          \"produto\": 116,\r\n          \"papelContrato\": 1\r\n        }\r\n      ]\r\n    },\r\n    \"empresa\": {\r\n      \"empresas\": [\r\n        1,\r\n        14,\r\n        17\r\n      ]\r\n    }\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://wwws.portoseguro.com.br/apifinanceiro/financeiro/v1/contratos/obterListaParcela-prd",
+									"protocol": "https",
+									"host": [
+										"wwws",
+										"portoseguro",
+										"com",
+										"br"
+									],
+									"path": [
+										"apifinanceiro",
+										"financeiro",
+										"v1",
+										"contratos",
+										"obterListaParcela-prd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "AcessoDadosId",
+									"value": "srvclnApps01.56664"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en-US"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "483"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 21 Jun 2021 16:14:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Gateway Porto"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"retorno\": {\n        \"codigo\": \"1\",\n        \"mensagem\": \"OK\",\n        \"parcela\": {\n            \"codigoFormaPagamento\": \"41\",\n            \"formatoMoeda\": \"R$\",\n            \"numeroDigitoPev\": \"0\",\n            \"vigenciaFinal\": \"2022-04-16T00:00:00-03:00\",\n            \"codigoProdutoBcp\": \"1391\",\n            \"dataEmissao\": \"2021-03-06T00:00:00-03:00\",\n            \"numeroDigitoEndosso\": \"447005\",\n            \"nomeFormaPagamento\": \"FRAC. 1A PARCELA CARNE\",\n            \"flagOrigemBusca\": \"L\",\n            \"codigoSusep\": \"3585CJ\",\n            \"nomePessoa\": \"DIEGO JEFFERSON ALMEIDA DE ASSIS\",\n            \"numeroParcela\": \"1\",\n            \"numeroContratoSistemaOrigem\": \"21|1391|346099|\",\n            \"codigoSucursal\": \"21\",\n            \"numeroDigitoTitulo\": \"6346922410\",\n            \"codigoTipoEmissaoCobranca\": \"3\",\n            \"codigoEmpresa\": \"1\",\n            \"valorParcela\": \"67.56015\",\n            \"codigoRamo\": \"1391\",\n            \"numeroDigitoApolice\": \"346099\",\n            \"dataVencimento\": \"2021-04-20T00:00:00-03:00\",\n            \"numeroDigitoItem\": \"0\",\n            \"codigoTipoCobranca\": \"1\",\n            \"nomeProdutoBcp\": \"VIDA INDIVIDUAL\",\n            \"numeroDigitoSegurado\": \"104267386\",\n            \"codigoSituacaoParcela\": \"2\",\n            \"vigenciaInicial\": \"2021-04-17T00:00:00-03:00\",\n            \"valorIof\": \"0.25575\"\n        }\n    }\n}"
+						},
+						{
+							"name": "Erro ao obter response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"codigoEmpresa\": \"<string>\",\n    \"operacaoPrincipal\": \"<string>\",\n    \"subOperacao\": \"<string>\",\n    \"numeroCartao\": \"<string>\",\n    \"validadeCartao\": \"<string>\",\n    \"contratoComercial\": \"<string>\",\n    \"quantidadeParcelas\": \"<string>\",\n    \"valor\": \"<number>\",\n    \"cvv\": \"<string>\",\n    \"numeroEndosso\": \"<string>\",\n    \"numeroParcela\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/autorizacao/regularizarParcela",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"autorizacao",
+										"regularizarParcela"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"codigo\": \"<integer>\",\n \"mensagem\": [\n  \"<string>\",\n  \"<string>\"\n ]\n}"
+						},
+						{
+							"name": "ObterListaParcela",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer 50fb7e62-6b89-4e11-9451-e49f1b40ea3f"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"obterListaParcela\": {\r\n    \"mostraContador\": true,\r\n    \"codigoSusep\": \"COL10J\",\r\n    \"todasSuseps\": true,\r\n    \"restricoes\": [\r\n      {\r\n        \"nomeAtributo\": \"codigoTipoConsulta\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"D\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"codigoSucursal\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 1\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"codigoRamo\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 1391\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"numeroDigitoApolice\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 161438\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"origemBusca\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"VIDA_INDIVIDUAL\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"hostBCP\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"washmlcorp\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"quantidadeMaximaParcela\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 249\r\n      }\r\n    ],\r\n    \"produtosPapeisContratos\": {\r\n      \"papeisProduto\": [\r\n        {\r\n          \"papelContrato\": 8,\r\n          \"produto\": 43\r\n        },\r\n        {\r\n          \"papelContrato\": 8,\r\n          \"produto\": 17\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 11\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 27\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 1\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 2\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 3\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 4\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 5\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 6\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 7\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 8\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 9\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 10\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 13\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 14\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 15\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 16\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 35\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 32\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 34\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 39\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 33\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 61\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 38\r\n        },\r\n        {\r\n          \"produto\": 72,\r\n          \"papelContrato\": 1\r\n        },\r\n        {\r\n          \"produto\": 116,\r\n          \"papelContrato\": 1\r\n        }\r\n      ]\r\n    },\r\n    \"empresa\": {\r\n      \"empresas\": [\r\n        1,\r\n        14,\r\n        17\r\n      ]\r\n    }\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://hml.portoseguro.com.br/apifinanceiro/financeiro/v1/contratos/obterListaParcela",
+									"protocol": "https",
+									"host": [
+										"hml",
+										"portoseguro",
+										"com",
+										"br"
+									],
+									"path": [
+										"apifinanceiro",
+										"financeiro",
+										"v1",
+										"contratos",
+										"obterListaParcela"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "AcessoDadosId",
+									"value": "GIWsrvclnApps01.112959"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en-US"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "910"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Jun 2021 14:56:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Porto Seguro"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"retorno\": {\n        \"codigo\": \"1\",\n        \"mensagem\": \"OK\",\n        \"parcela\": {\n            \"codigoFormaPagamento\": \"41\",\n            \"formatoMoeda\": \"R$\",\n            \"numeroDigitoPev\": \"0\",\n            \"vigenciaFinal\": \"2022-03-25T00:00:00-03:00\",\n            \"codigoProdutoBcp\": \"1391\",\n            \"dataEmissao\": \"2021-03-24T00:00:00-03:00\",\n            \"numeroDigitoEndosso\": \"235350\",\n            \"nomeFormaPagamento\": \"FRAC. 1A PARCELA CARNE\",\n            \"flagOrigemBusca\": \"L\",\n            \"codigoSusep\": \"COL10J\",\n            \"nomePessoa\": \"CAMILA TESTE DOIS COMISSÃO\",\n            \"numeroParcela\": \"1\",\n            \"numeroContratoSistemaOrigem\": \"1|1391|161438|\",\n            \"codigoSucursal\": \"1\",\n            \"numeroDigitoTitulo\": \"7011858203\",\n            \"codigoTipoEmissaoCobranca\": \"3\",\n            \"codigoEmpresa\": \"1\",\n            \"valorParcela\": \"46.40286\",\n            \"codigoRamo\": \"1391\",\n            \"numeroDigitoApolice\": \"161438\",\n            \"dataVencimento\": \"2021-05-15T00:00:00-03:00\",\n            \"numeroDigitoItem\": \"0\",\n            \"codigoTipoCobranca\": \"1\",\n            \"nomeProdutoBcp\": \"VIDA INDIVIDUAL\",\n            \"numeroDigitoSegurado\": \"100730120\",\n            \"codigoSituacaoParcela\": \"1\",\n            \"vigenciaInicial\": \"2021-03-26T00:00:00-03:00\",\n            \"valorIof\": \"0.17566\"\n        }\n    }\n}"
+						},
+						{
+							"name": "ObterListaParcela PROD 1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer 50fb7e62-6b89-4e11-9451-e49f1b40ea3f"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"obterListaParcela\": {\r\n    \"mostraContador\": true,\r\n    \"codigoSusep\": \"3585CJ\",\r\n    \"todasSuseps\": true,\r\n    \"restricoes\": [\r\n      {\r\n        \"nomeAtributo\": \"codigoTipoConsulta\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"D\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"codigoSucursal\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 21\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"codigoRamo\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 1391\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"numeroDigitoApolice\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 346099\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"origemBusca\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"VIDA_INDIVIDUAL\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"hostBCP\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": \"washmlcorp\"\r\n      },\r\n      {\r\n        \"nomeAtributo\": \"quantidadeMaximaParcela\",\r\n        \"operadorRestricao\": \"=\",\r\n        \"valorRestricao\": 249\r\n      }\r\n    ],\r\n    \"produtosPapeisContratos\": {\r\n      \"papeisProduto\": [\r\n        {\r\n          \"papelContrato\": 8,\r\n          \"produto\": 43\r\n        },\r\n        {\r\n          \"papelContrato\": 8,\r\n          \"produto\": 17\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 11\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 27\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 1\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 2\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 3\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 4\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 5\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 6\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 7\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 8\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 9\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 10\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 13\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 14\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 15\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 16\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 35\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 32\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 34\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 39\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 33\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 61\r\n        },\r\n        {\r\n          \"papelContrato\": 1,\r\n          \"produto\": 38\r\n        },\r\n        {\r\n          \"produto\": 72,\r\n          \"papelContrato\": 1\r\n        },\r\n        {\r\n          \"produto\": 116,\r\n          \"papelContrato\": 1\r\n        }\r\n      ]\r\n    },\r\n    \"empresa\": {\r\n      \"empresas\": [\r\n        1,\r\n        14,\r\n        17\r\n      ]\r\n    }\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://wwws.portoseguro.com.br/apifinanceiro/financeiro/v1/contratos/obterListaParcela-prd",
+									"protocol": "https",
+									"host": [
+										"wwws",
+										"portoseguro",
+										"com",
+										"br"
+									],
+									"path": [
+										"apifinanceiro",
+										"financeiro",
+										"v1",
+										"contratos",
+										"obterListaParcela-prd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "AcessoDadosId",
+									"value": "srvclnApps01.56664"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en-US"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "483"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 21 Jun 2021 16:14:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Gateway Porto"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"retorno\": {\n        \"codigo\": \"1\",\n        \"mensagem\": \"OK\",\n        \"parcela\": {\n            \"codigoFormaPagamento\": \"41\",\n            \"formatoMoeda\": \"R$\",\n            \"numeroDigitoPev\": \"0\",\n            \"vigenciaFinal\": \"2022-04-16T00:00:00-03:00\",\n            \"codigoProdutoBcp\": \"1391\",\n            \"dataEmissao\": \"2021-03-06T00:00:00-03:00\",\n            \"numeroDigitoEndosso\": \"447005\",\n            \"nomeFormaPagamento\": \"FRAC. 1A PARCELA CARNE\",\n            \"flagOrigemBusca\": \"L\",\n            \"codigoSusep\": \"3585CJ\",\n            \"nomePessoa\": \"DIEGO JEFFERSON ALMEIDA DE ASSIS\",\n            \"numeroParcela\": \"1\",\n            \"numeroContratoSistemaOrigem\": \"21|1391|346099|\",\n            \"codigoSucursal\": \"21\",\n            \"numeroDigitoTitulo\": \"6346922410\",\n            \"codigoTipoEmissaoCobranca\": \"3\",\n            \"codigoEmpresa\": \"1\",\n            \"valorParcela\": \"67.56015\",\n            \"codigoRamo\": \"1391\",\n            \"numeroDigitoApolice\": \"346099\",\n            \"dataVencimento\": \"2021-04-20T00:00:00-03:00\",\n            \"numeroDigitoItem\": \"0\",\n            \"codigoTipoCobranca\": \"1\",\n            \"nomeProdutoBcp\": \"VIDA INDIVIDUAL\",\n            \"numeroDigitoSegurado\": \"104267386\",\n            \"codigoSituacaoParcela\": \"2\",\n            \"vigenciaInicial\": \"2021-04-17T00:00:00-03:00\",\n            \"valorIof\": \"0.25575\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "2ViaBoletoIFX HML",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "120f23cd-bb7c-432e-a818-7b08b306dce2",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer 50fb7e62-6b89-4e11-9451-e49f1b40ea3f"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://tst.portoseguro.com.br/apifinanceiro/financeiro/v1/contratos/segunda-via-boleto-ifx?titulo=7011858203&email=raphael.ishak@portoseguro.com.br",
+							"protocol": "https",
+							"host": [
+								"tst",
+								"portoseguro",
+								"com",
+								"br"
+							],
+							"path": [
+								"apifinanceiro",
+								"financeiro",
+								"v1",
+								"contratos",
+								"segunda-via-boleto-ifx"
+							],
+							"query": [
+								{
+									"key": "titulo",
+									"value": "7011858203"
+								},
+								{
+									"key": "email",
+									"value": "raphael.ishak@portoseguro.com.br"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sucesso",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"codigoEmpresa\": \"<string>\",\n    \"operacaoPrincipal\": \"<string>\",\n    \"subOperacao\": \"<string>\",\n    \"numeroCartao\": \"<string>\",\n    \"validadeCartao\": \"<string>\",\n    \"contratoComercial\": \"<string>\",\n    \"quantidadeParcelas\": \"<string>\",\n    \"valor\": \"<number>\",\n    \"cvv\": \"<string>\",\n    \"numeroEndosso\": \"<string>\",\n    \"numeroParcela\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/autorizacao/regularizarParcela",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"autorizacao",
+										"regularizarParcela"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"codigo\": \"<integer>\",\n \"mensagem\": \"<string>\",\n \"codigoGateway\": \"<integer>\",\n \"mensagemGateway\": \"<string>\"\n}"
+						},
+						{
+							"name": "Erro ao obter response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"codigoEmpresa\": \"<string>\",\n    \"operacaoPrincipal\": \"<string>\",\n    \"subOperacao\": \"<string>\",\n    \"numeroCartao\": \"<string>\",\n    \"validadeCartao\": \"<string>\",\n    \"contratoComercial\": \"<string>\",\n    \"quantidadeParcelas\": \"<string>\",\n    \"valor\": \"<number>\",\n    \"cvv\": \"<string>\",\n    \"numeroEndosso\": \"<string>\",\n    \"numeroParcela\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/autorizacao/regularizarParcela",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"autorizacao",
+										"regularizarParcela"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"codigo\": \"<integer>\",\n \"mensagem\": [\n  \"<string>\",\n  \"<string>\"\n ]\n}"
+						}
+					]
+				},
+				{
+					"name": "2ViaBoletoIFX PROD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "120f23cd-bb7c-432e-a818-7b08b306dce2",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer 50fb7e62-6b89-4e11-9451-e49f1b40ea3f"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://wwws.portoseguro.com.br/apifinanceiro/financeiro/v1/contratos/segunda-via-boleto-ifx-prd?titulo=7011858203&email=raphael.ishak@portoseguro.com.br",
+							"protocol": "https",
+							"host": [
+								"wwws",
+								"portoseguro",
+								"com",
+								"br"
+							],
+							"path": [
+								"apifinanceiro",
+								"financeiro",
+								"v1",
+								"contratos",
+								"segunda-via-boleto-ifx-prd"
+							],
+							"query": [
+								{
+									"key": "titulo",
+									"value": "7011858203"
+								},
+								{
+									"key": "email",
+									"value": "raphael.ishak@portoseguro.com.br"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Erro ao obter response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"codigoEmpresa\": \"<string>\",\n    \"operacaoPrincipal\": \"<string>\",\n    \"subOperacao\": \"<string>\",\n    \"numeroCartao\": \"<string>\",\n    \"validadeCartao\": \"<string>\",\n    \"contratoComercial\": \"<string>\",\n    \"quantidadeParcelas\": \"<string>\",\n    \"valor\": \"<number>\",\n    \"cvv\": \"<string>\",\n    \"numeroEndosso\": \"<string>\",\n    \"numeroParcela\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/autorizacao/regularizarParcela",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"autorizacao",
+										"regularizarParcela"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"codigo\": \"<integer>\",\n \"mensagem\": [\n  \"<string>\",\n  \"<string>\"\n ]\n}"
+						},
+						{
+							"name": "Gerado com Sucesso",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer 50fb7e62-6b89-4e11-9451-e49f1b40ea3f"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://wwws.portoseguro.com.br/apifinanceiro/financeiro/v1/contratos/segunda-via-boleto-ifx-prd?titulo=6346922436&email=cesar.silva@smarkio.com.br",
+									"protocol": "https",
+									"host": [
+										"wwws",
+										"portoseguro",
+										"com",
+										"br"
+									],
+									"path": [
+										"apifinanceiro",
+										"financeiro",
+										"v1",
+										"contratos",
+										"segunda-via-boleto-ifx-prd"
+									],
+									"query": [
+										{
+											"key": "titulo",
+											"value": "6346922436"
+										},
+										{
+											"key": "email",
+											"value": "cesar.silva@smarkio.com.br"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "AcessoDadosId",
+									"value": "srvclnApps03.155049"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en-US"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "136"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Jun 2021 20:04:16 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Gateway Porto"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"retorno\": {\n        \"retornoSegundaViaBoleto\": {\n            \"caminhoPDF\": \"\",\n            \"codigoErro\": \"0\",\n            \"nomeServico\": \"Gera2ViaBoleto\",\n            \"titulo\": \"6346922436\",\n            \"descricao\": \"\",\n            \"nomePDF\": \"\"\n        }\n    }\n}"
+						},
+						{
+							"name": "sucesso",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"codigoEmpresa\": \"<string>\",\n    \"operacaoPrincipal\": \"<string>\",\n    \"subOperacao\": \"<string>\",\n    \"numeroCartao\": \"<string>\",\n    \"validadeCartao\": \"<string>\",\n    \"contratoComercial\": \"<string>\",\n    \"quantidadeParcelas\": \"<string>\",\n    \"valor\": \"<number>\",\n    \"cvv\": \"<string>\",\n    \"numeroEndosso\": \"<string>\",\n    \"numeroParcela\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/autorizacao/regularizarParcela",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"autorizacao",
+										"regularizarParcela"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"codigo\": \"<integer>\",\n \"mensagem\": \"<string>\",\n \"codigoGateway\": \"<integer>\",\n \"mensagemGateway\": \"<string>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Gerar Token Atendimento HML",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "grant_type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded",
+						"disabled": true
+					},
+					{
+						"key": "idp",
+						"type": "text",
+						"value": "6",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "c5986c87-da1f-40ff-ac4a-00d52a42c2ea",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "7d1d6a22-b6f9-4c6b-8c08-b6460d7f1457",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "atendimento",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "slhtsagm",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "gvkmqd69",
+							"type": "text"
+						},
+						{
+							"key": "idp",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://apihml.portoseguro.com.br/auth/oauth/v2/token",
+					"protocol": "https",
+					"host": [
+						"apihml",
+						"portoseguro",
+						"com",
+						"br"
+					],
+					"path": [
+						"auth",
+						"oauth",
+						"v2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta dados Contratos HML",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "7317385f-fc73-4ba1-9b48-47e0ba512e17",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer 64faf02f-35f6-41c0-a2ed-f4e1bb0c9b1a"
+					}
+				],
+				"url": {
+					"raw": "https://apihml.portoseguro.com.br/atendimento/whatsapp/v1/dadoscontratos?numDocumento=29624823847",
+					"protocol": "https",
+					"host": [
+						"apihml",
+						"portoseguro",
+						"com",
+						"br"
+					],
+					"path": [
+						"atendimento",
+						"whatsapp",
+						"v1",
+						"dadoscontratos"
+					],
+					"query": [
+						{
+							"key": "numDocumento",
+							"value": "29624823847"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gerar Token Atendimento PROD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "grant_type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "idp",
+						"type": "text",
+						"value": "6"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "88e7991b-c5ed-4992-b201-e89bd12656a1",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "1de8fcbc-f0a9-448a-9f4d-07f5e832542c",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "atendimento",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "slptsagm",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "zmztfc55",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.portoseguro.com.br/auth/oauth/v2/token",
+					"protocol": "https",
+					"host": [
+						"api",
+						"portoseguro",
+						"com",
+						"br"
+					],
+					"path": [
+						"auth",
+						"oauth",
+						"v2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta dados Contratos PRD",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer be846f3c-11c2-42e7-b9a0-b96354a33cd5"
+					}
+				],
+				"url": {
+					"raw": "https://api.portoseguro.com.br/atendimento/whatsapp/v1/dadoscontratos?numDocumento=00242482155",
+					"protocol": "https",
+					"host": [
+						"api",
+						"portoseguro",
+						"com",
+						"br"
+					],
+					"path": [
+						"atendimento",
+						"whatsapp",
+						"v1",
+						"dadoscontratos"
+					],
+					"query": [
+						{
+							"key": "numDocumento",
+							"value": "00242482155"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Consulta dados Contratos PRD",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer be846f3c-11c2-42e7-b9a0-b96354a33cd5"
+							}
+						],
+						"url": {
+							"raw": "https://api.portoseguro.com.br/atendimento/whatsapp/v1/dadoscontratos?numDocumento=00242482155",
+							"protocol": "https",
+							"host": [
+								"api",
+								"portoseguro",
+								"com",
+								"br"
+							],
+							"path": [
+								"atendimento",
+								"whatsapp",
+								"v1",
+								"dadoscontratos"
+							],
+							"query": [
+								{
+									"key": "numDocumento",
+									"value": "00242482155"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Set-Bearer",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.ew0KCSJzdWIiOiAic2xwdHNhZ20iLA0KCSJyb2xlcyI6IFsiRGFkb3NSZWZlcmVuY2lhLkNvbnN1bWlkb3IiLCAiYXBpX2xncGRfcHJkX3Blc2NvZCIsICJhcGlfbGdwZF9wcmRfbmFvY2xpZW50ZSIsICJhcGlfbGdwZF9wcmRfZXNxdWVjaW1lbnRvIiwgImFwaV9sZ3BkX3ByZF9nb2xkZW4iLCAiYXBpX2JjcF9wcmRfY29uc3VsdGFkYWRvcyIsICJhcGlfY3BfcHJkX2dlcmFyX3Blcmd1bnRhcyIsICJhcGlfbGdwZF9wcmRfdHJhdGFtZW50byIsICJhcGlfbGdwZF9wcmRfYWx0ZXJhY2FvIiwgImFwaV9sZ3BkX3ByZF9kb21pbmlvIiwgImFwaV9sZ3BkX3ByZF9kb21pbmlvYWx0ZXJhY2FvIl0sDQoJIm5vbWUiOiAic2xwdHNhZ20iLA0KCSJpc3MiOiAiaHR0cHM6Ly93d3dzLnBvcnRvc2VndXJvLmNvbS5iciIsDQoJImNvZGlnb0F1eCI6ICIiLA0KCSJwb3J0YWwiOiAzLA0KCSJleHAiOiAxNjIzMzQwMDA5DQp9.CBC6u3DqaNzhIFKOIeUv4nRh8MvB-bvq3fgst5oUJb_24Cccphc4EbSar9pZAP-W5NLpm0hyO6U1QTciKUjZwUA1S9AEeGYqB0k44psEvJEurlMqvzm8oTGm8zP-clE9YMmaYePMCyhagN3v5YzSr4cEcmsAgvejxDoTKbkjmEDu5q-ZSNN5pPn0VxA1DnpkXQiSD4Bj05Dkqv-DQ2JAgT9eXNHd9j6l2iElm_Z7Xv0LoMdRmNf3GOBXpHP2-Wrvt9R5B2wz6CIferhY9ytTWZKBDF3jQixLBvs6JGzz3oH-i-YVZL8_u9udQnmvftw3Mw0xbQTG6j4_FxL7S2n0gQ"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "7b2ef12450d20d317f6db4dc53c7cde1=dc8c2127ef86a4c045d46999ea9b2c7b; Path=/atendimento/whatsapp/v1; HttpOnly; Secure; Domain=api.portoseguro.com.br; SameSite=None; Domain=api.portoseguro.com.br; Path=/atendimento/whatsapp/v1"
+						},
+						{
+							"key": "Cache-control",
+							"value": "private"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "473"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Jun 2021 14:47:41 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Porto Seguro"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"automovel\": [],\n    \"cartaoCredito\": [],\n    \"consorcio\": [],\n    \"fiancaLocaticia\": [],\n    \"financiamento\": [],\n    \"previdenciaPrivada\": [],\n    \"protecaoMonitoramento\": [],\n    \"ramoElementar\": [],\n    \"saude\": [],\n    \"seguroGarantia\": [],\n    \"transporte\": [],\n    \"vida\": [\n        {\n            \"numeroContrato\": 206380636,\n            \"emsempcod\": 1,\n            \"codigoProduto\": 32,\n            \"segmento\": 13,\n            \"descricaoSegmento\": \"Vida\",\n            \"endosso\": 0,\n            \"papelPessoa\": 1,\n            \"nomePapelPessoa\": \"CLIENTE\",\n            \"vigenciaInicial\": \"04-11-2020\",\n            \"vigenciaFinal\": \"03-07-2021\",\n            \"dataEmissao\": \"06-11-2020\",\n            \"codSituacaoContrato\": 1,\n            \"situacaoContrato\": \"ATIVO\",\n            \"sucursal\": \"7\",\n            \"ramo\": \"1391\",\n            \"apolice\": \"1438547\"\n        },\n        {\n            \"numeroContrato\": 269677014,\n            \"emsempcod\": 1,\n            \"codigoProduto\": 32,\n            \"segmento\": 13,\n            \"descricaoSegmento\": \"Vida\",\n            \"endosso\": null,\n            \"papelPessoa\": 1,\n            \"nomePapelPessoa\": \"CLIENTE\",\n            \"vigenciaInicial\": \"04-07-2021\",\n            \"vigenciaFinal\": \"03-07-2022\",\n            \"dataEmissao\": \"24-05-2021\",\n            \"codSituacaoContrato\": 1,\n            \"situacaoContrato\": \"ATIVO\",\n            \"sucursal\": \"7\",\n            \"ramo\": \"1391\",\n            \"apolice\": \"1769543\"\n        }\n    ],\n    \"portoFaz\": [],\n    \"azulAuto\": [],\n    \"itauAuto\": [],\n    \"azulResidencia\": [],\n    \"itauResidencia\": [],\n    \"renovaEcopecas\": [],\n    \"investimento\": [],\n    \"capitalizacao\": [],\n    \"healthPet\": [],\n    \"manutencaoAutomativa\": [],\n    \"carroFacil\": [],\n    \"blluAuto\": []\n}"
+				},
+				{
+					"name": "Consulta dados Contratos PRD 1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer be846f3c-11c2-42e7-b9a0-b96354a33cd5"
+							}
+						],
+						"url": {
+							"raw": "https://api.portoseguro.com.br/atendimento/whatsapp/v1/dadoscontratos?numDocumento=00044268351",
+							"protocol": "https",
+							"host": [
+								"api",
+								"portoseguro",
+								"com",
+								"br"
+							],
+							"path": [
+								"atendimento",
+								"whatsapp",
+								"v1",
+								"dadoscontratos"
+							],
+							"query": [
+								{
+									"key": "numDocumento",
+									"value": "00044268351"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Set-Bearer",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.ew0KCSJzdWIiOiAic2xwdHNhZ20iLA0KCSJyb2xlcyI6IFsiRGFkb3NSZWZlcmVuY2lhLkNvbnN1bWlkb3IiLCAiYXBpX2xncGRfcHJkX3Blc2NvZCIsICJhcGlfbGdwZF9wcmRfbmFvY2xpZW50ZSIsICJhcGlfbGdwZF9wcmRfZXNxdWVjaW1lbnRvIiwgImFwaV9sZ3BkX3ByZF9nb2xkZW4iLCAiYXBpX2JjcF9wcmRfY29uc3VsdGFkYWRvcyIsICJhcGlfY3BfcHJkX2dlcmFyX3Blcmd1bnRhcyIsICJhcGlfbGdwZF9wcmRfdHJhdGFtZW50byIsICJhcGlfbGdwZF9wcmRfYWx0ZXJhY2FvIiwgImFwaV9sZ3BkX3ByZF9kb21pbmlvIiwgImFwaV9sZ3BkX3ByZF9kb21pbmlvYWx0ZXJhY2FvIl0sDQoJIm5vbWUiOiAic2xwdHNhZ20iLA0KCSJpc3MiOiAiaHR0cHM6Ly93d3dzLnBvcnRvc2VndXJvLmNvbS5iciIsDQoJImNvZGlnb0F1eCI6ICIiLA0KCSJwb3J0YWwiOiAzLA0KCSJleHAiOiAxNjI0Mjk1MjY2DQp9.Nu9sefvLP16iScHXCw44ZH64qtAaS38LQTRfTlIY8jT3ZrgzVfONhTuG5uN77utynQRdQKxfiWtoC4nEUQzC1-YseP6CoOySK7SRGNUZoHl0pRNOFpZ8LZSig4YNWoeaCpJ7WOS6cC7UUfDHe6XTSwJ8cHeCnNlAi2ESjz_HfC-8WjFwy2afCuKm82IF06CzrzcL0iig3l-e6p8A8ta-_VN9iyjVwoYiJyIpN3wTio6hYsrwm6_qm2KCAlKFUs4YL9o8_7qAY4rkPCsiSHPZFIMfGoaacRw41psAc8Xe1xYzpd6cZtf90Bl3QpqMtDh0ZLJ_EooxX1tSYKiKqrxOKQ"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "428"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Jun 2021 16:13:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Porto Seguro"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"automovel\": [],\n    \"cartaoCredito\": [],\n    \"consorcio\": [],\n    \"fiancaLocaticia\": [],\n    \"financiamento\": [],\n    \"previdenciaPrivada\": [],\n    \"protecaoMonitoramento\": [],\n    \"ramoElementar\": [],\n    \"saude\": [],\n    \"seguroGarantia\": [],\n    \"transporte\": [],\n    \"vida\": [\n        {\n            \"numeroContrato\": 261169488,\n            \"emsempcod\": 1,\n            \"codigoProduto\": 32,\n            \"segmento\": 13,\n            \"descricaoSegmento\": \"Vida\",\n            \"endosso\": null,\n            \"papelPessoa\": 1,\n            \"nomePapelPessoa\": \"CLIENTE\",\n            \"vigenciaInicial\": \"17-04-2021\",\n            \"vigenciaFinal\": \"16-04-2022\",\n            \"dataEmissao\": \"08-03-2021\",\n            \"codSituacaoContrato\": 1,\n            \"situacaoContrato\": \"ATIVO\",\n            \"sucursal\": \"21\",\n            \"ramo\": \"1391\",\n            \"apolice\": \"346099\"\n        }\n    ],\n    \"portoFaz\": [],\n    \"azulAuto\": [],\n    \"itauAuto\": [],\n    \"azulResidencia\": [],\n    \"itauResidencia\": [],\n    \"renovaEcopecas\": [],\n    \"investimento\": [],\n    \"capitalizacao\": [],\n    \"healthPet\": [],\n    \"manutencaoAutomativa\": [],\n    \"carroFacil\": [],\n    \"blluAuto\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Dados Gerais",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wwws.portoseguro.com.br/apifinanceiro/financeiro/v1/contratos/consulta-dados-gerais-contrato?tipoIdentificacao=BR2&nroIdentificacao=35388909867&tipoContrato=&idContrato=&nroEndosso=&codigoEmpresa=&codigoOrigem=IVR&idModalidadePesquisa=21",
+					"protocol": "https",
+					"host": [
+						"wwws",
+						"portoseguro",
+						"com",
+						"br"
+					],
+					"path": [
+						"apifinanceiro",
+						"financeiro",
+						"v1",
+						"contratos",
+						"consulta-dados-gerais-contrato"
+					],
+					"query": [
+						{
+							"key": "tipoIdentificacao",
+							"value": "BR2"
+						},
+						{
+							"key": "nroIdentificacao",
+							"value": "35388909867"
+						},
+						{
+							"key": "tipoContrato",
+							"value": ""
+						},
+						{
+							"key": "idContrato",
+							"value": ""
+						},
+						{
+							"key": "nroEndosso",
+							"value": ""
+						},
+						{
+							"key": "codigoEmpresa",
+							"value": ""
+						},
+						{
+							"key": "codigoOrigem",
+							"value": "IVR"
+						},
+						{
+							"key": "idModalidadePesquisa",
+							"value": "21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscaContratoCarrosel (offline) Copy 2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sC6xQ2sO8pL9lG4wU8qM2jC9wS8cK8tB",
+						"type": "text"
+					},
+					{
+						"key": "idp",
+						"value": "6",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:3000/consultaParcelaVida?sucursal=21&ramo=1391&apolice=346099&susep=3585CJ",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"consultaParcelaVida"
+					],
+					"query": [
+						{
+							"key": "sucursal",
+							"value": "21"
+						},
+						{
+							"key": "ramo",
+							"value": "1391"
+						},
+						{
+							"key": "apolice",
+							"value": "346099"
+						},
+						{
+							"key": "susep",
+							"value": "3585CJ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultaParcelasVida",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sC6xQ2sO8pL9lG4wU8qM2jC9wS8cK8tB",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.altu.com.br/centralFinanceiraPorto-dev/consultaParcelaVida",
+					"protocol": "https",
+					"host": [
+						"api",
+						"altu",
+						"com",
+						"br"
+					],
+					"path": [
+						"centralFinanceiraPorto-dev",
+						"consultaParcelaVida"
+					],
+					"query": [
+						{
+							"key": "sucursal",
+							"value": "21",
+							"disabled": true
+						},
+						{
+							"key": "ramo",
+							"value": "1391",
+							"disabled": true
+						},
+						{
+							"key": "apolice",
+							"value": "346099",
+							"disabled": true
+						},
+						{
+							"key": "susep",
+							"value": "3585CJ",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultaParcelasVida  local",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "sC6xQ2sO8pL9lG4wU8qM2jC9wS8cK8tB"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:3000/consultaParcelaVida?sucursal=21&ramo=1391&apolice=346099&susep=3585CJ",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"consultaParcelaVida"
+					],
+					"query": [
+						{
+							"key": "sucursal",
+							"value": "21"
+						},
+						{
+							"key": "ramo",
+							"value": "1391"
+						},
+						{
+							"key": "apolice",
+							"value": "346099"
+						},
+						{
+							"key": "susep",
+							"value": "3585CJ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "segunda via Local",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "sC6xQ2sO8pL9lG4wU8qM2jC9wS8cK8tB"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:3000/segundaViaBoletoVida?titulo=6346922436&teste=1",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"segundaViaBoletoVida"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "cesar.silva@smarkio.com.br",
+							"disabled": true
+						},
+						{
+							"key": "titulo",
+							"value": "6346922436"
+						},
+						{
+							"key": "teste",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Passando parametro errado ou faltando",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "sC6xQ2sO8pL9lG4wU8qM2jC9wS8cK8tB"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:3000/segundaViaBoletoVida?email=cesar.silva@smarkio.com.br",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"segundaViaBoletoVida"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "cesar.silva@smarkio.com.br"
+								},
+								{
+									"key": "titulo",
+									"value": "6346922436",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "content-length",
+							"value": "54"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 26 Jun 2021 02:21:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 400,\n    \"message\": \"\\\"titulo\\\" is required\"\n}"
+				},
+				{
+					"name": "Passando parametro não mapeado",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "sC6xQ2sO8pL9lG4wU8qM2jC9wS8cK8tB"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:3000/segundaViaBoletoVida?titulo=6346922436&teste=1",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"segundaViaBoletoVida"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "cesar.silva@smarkio.com.br",
+									"disabled": true
+								},
+								{
+									"key": "titulo",
+									"value": "6346922436"
+								},
+								{
+									"key": "teste",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "content-length",
+							"value": "56"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 26 Jun 2021 02:22:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 400,\n    \"message\": \"\\\"teste\\\" is not allowed\"\n}"
+				},
+				{
+					"name": "Email enviado com sucesso",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "sC6xQ2sO8pL9lG4wU8qM2jC9wS8cK8tB"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:3000/segundaViaBoletoVida",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"segundaViaBoletoVida"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "cesar.silva@smarkio.com.br",
+									"disabled": true
+								},
+								{
+									"key": "titulo",
+									"value": "6346922436",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "content-length",
+							"value": "251"
+						},
+						{
+							"key": "accept-ranges",
+							"value": "bytes"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 26 Jun 2021 01:01:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"message\": \"Segunda Via gerada e email enviado com sucesso!\",\n    \"caminhoPDF\": \"\",\n    \"codigoErro\": \"0\",\n    \"nomeServico\": \"Gera2ViaBoleto\",\n    \"titulo\": \"6346922436\",\n    \"descricao\": \"\",\n    \"nomePDF\": \"\",\n    \"email\": \"cesar.silva@smarkio.com.br\",\n    \"typeemail\": \"string\"\n}"
+				}
+			]
+		},
+		{
+			"name": "buscaContrato != vida",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "TFMS5bQkYwnfs8YPPDnwqD4WQqsYwU3pp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.altu.com.br/centralFinanceiraPorto-<?$env?>/buscaContrato?IdParceiroNegocios=<?$identification_number1?>&CodTipoProduto=<?$codtipoproduto?>&documento=<? $apolice ?>&tipoContrato=<?$tipoContrato?>&endosso=<?$optin_lista[2]?>",
+					"protocol": "https",
+					"host": [
+						"api",
+						"altu",
+						"com",
+						"br"
+					],
+					"path": [
+						"centralFinanceiraPorto-<"
+					],
+					"query": [
+						{
+							"key": "$env?>/buscaContrato?IdParceiroNegocios",
+							"value": "<?$identification_number1?>"
+						},
+						{
+							"key": "CodTipoProduto",
+							"value": "<?$codtipoproduto?>"
+						},
+						{
+							"key": "documento",
+							"value": "<? $apolice ?>"
+						},
+						{
+							"key": "tipoContrato",
+							"value": "<?$tipoContrato?>"
+						},
+						{
+							"key": "endosso",
+							"value": "<?$optin_lista[2]?>"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
