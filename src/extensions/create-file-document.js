@@ -4,7 +4,7 @@ module.exports = toolbox => {
   toolbox.createFileDocument = ({ document, name = 'readme', folder = './'} ) => {
     toolbox.fs.writeFile(
       `${folder}${/\.rm$/.test(fileName)? fileName : fileName +'.rm' } `,
-      document,
+      document.join('\n'),
       function (err) {
         if (err) throw err
       }

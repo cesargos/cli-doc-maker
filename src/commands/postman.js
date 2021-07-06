@@ -14,7 +14,7 @@ module.exports = {
 
     if (/\w\.\w/.test(file) && !/\w\.postman_collection\.json$/.test(file)){
       print.error("Incorrect file type");
-      print.info('Postman collections file type has the following extension: .postman_collection.json')
+      print.muted('Postman collections file type has the following extension: .postman_collection.json')
       return
     }
 
@@ -44,7 +44,7 @@ module.exports = {
     
     }catch(err){
       if (err === '')
-        print.info('Execution was aborted!');
+        print.muted('Execution was aborted!');
       else
         print.error('Error when trying to read the file!');
       return
@@ -52,7 +52,7 @@ module.exports = {
     
     if (!collection){
       print.error("Collection not found!");
-      print.info("Please check file name and path and then enter its relative path.");
+      print.muted("Please check file name and path and then enter its relative path.");
       return
     } 
 
@@ -75,9 +75,17 @@ module.exports = {
     toolbox.markdownOnString();
     const document = [];
     toolbox.builderEndpoint({ endpoint: collection.obj.item[0] , document })
-    print.debug(document);
+   
+    try{
+      toolbox.createFileDocument({ document, folder: document.folder} )
 
-    toolbox.createFileDocument = ({ document, folder: document.folder} )
+    }catch(err){
+      print.error('Error when trying to parse the file!');
+      print.muted(err);
+      return
+
+    }
+    print.debug(document);
 
   },
 }
