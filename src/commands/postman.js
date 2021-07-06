@@ -33,41 +33,51 @@ module.exports = {
       )
     
 
-    let collectionFile = null;
+    let collection = null;
     try{
-      collectionFile = fileName && toolbox.filesystem.exists(fileName )
-        ?  fs.readFileSync( fileName, encoding='utf8')
+      collection = fileName && toolbox.filesystem.exists(fileName )
+        ?  {
+          file: fs.readFileSync( fileName, encoding='utf8'),
+          path: fileName
+        }
         : await toolbox.findAndGetPostmanCollection({fileName}); 
+    
     }catch(err){
       if (err === '')
-        print.info('Execution was aborted!')
+        print.info('Execution was aborted!');
       else
         print.error('Error when trying to read the file!');
       return
     }
     
-    if (!collectionFile){
+    if (!collection){
       print.error("Collection not found!");
       print.info("Please check file name and path and then enter its relative path.");
       return
-    }
+    } 
 
-    let collection;
+    // print.debug(collection)
+
     try{
-      collection = JSON.parse(collectionFile)
+      collection.obj = JSON.parse(collection.file);
+      collection.folder = `${/^\w/.test(collection.path) ? './': ''}${collection.path.replace(/[^/]+$/,'')}`;
+      collection.name = collection.path.match(/[^/]+$/)[0];
     }catch{
       print.error('Error when trying to parse the file!');
       return
     }
 
 
-
     //print.info(collection.item[3])
+
+   // print.debug(collection)
     
     toolbox.markdownOnString();
     const document = [];
-    toolbox.builderEndpoint({ endpoint: collection.item[0] , document })
-    print.debug(document)
+    toolbox.builderEndpoint({ endpoint: collection.obj.item[0] , document })
+    print.debug(document);
+
+    toolbox.createFileDocument = ({ document, folder: document.folder} )
 
   },
 }

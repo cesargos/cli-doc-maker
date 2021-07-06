@@ -39,10 +39,21 @@ module.exports = toolbox => {
 
     //if (collectionsFound.length === 0 ) return null;
 
-    if (collectionsFound.length < 2 ) return collectionsFound[0] ? toolbox.fs.readFileSync( collectionsFound[0], encoding='utf8') : null;
+    if (collectionsFound.length < 2 ) return collectionsFound[0] 
+      ? {
+        file: toolbox.fs.readFileSync( collectionsFound[0], encoding='utf8'),
+        path: collectionsFound[0]
+      } 
+      : null;
 
-    const { select: pathAndNameSelect } = await toolbox.selectInput({ message: "Choose the collection from which you want to generate the documentation: ", choices: collectionsFound })
-    return toolbox.fs.readFileSync( pathAndNameSelect, encoding='utf8')
+    const { select: pathAndNameSelect } = await toolbox.selectInput({ 
+      message: "Choose the collection from which you want to generate the documentation: ", 
+      choices: collectionsFound 
+    })
+    return {
+      path: pathAndNameSelect,
+      file: toolbox.fs.readFileSync( pathAndNameSelect, encoding='utf8')
+    }
   }
 
 
