@@ -21,8 +21,11 @@ module.exports = {
  
     if (toolbox.filesystem.separator ==='/')
       print.warning('WARNING: Character "\\" is not supported. Remove it if the file or folder name has.');
-    else
-      print.warning('WARNING: The separator character "\\" is not supported\nPlease run the command in the same directory as the collection without passing "\\"')
+    else{
+      //'WARNING: The separator character "\\" is not supported\nPlease run the command in the same directory as the collection without passing "\\"')
+      print.warning('This version is not available for Windows O.S.!');
+      return;
+    }
     
 
     const fileName = /\w\.postman_collection\.json$/.test(file) 
@@ -77,15 +80,15 @@ module.exports = {
     toolbox.builderEndpoint({ endpoint: collection.obj.item[0] , document })
    
     try{
-      toolbox.createFileDocument({ document, folder: document.folder} )
+      toolbox.createFileDocument({ document, folder: collection.folder} )
 
     }catch(err){
-      print.error('Error when trying to parse the file!');
+      print.error('Error when trying to create the file markdown!');
       print.muted(err);
       return
 
     }
-    print.debug(document);
+    //print.debug(document);
 
   },
 }
