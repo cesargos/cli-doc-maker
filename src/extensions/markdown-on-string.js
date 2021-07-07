@@ -45,6 +45,7 @@ module.exports = toolbox => {
       nav: function (heading){ 
         return `[\`${this.valueOf()}\`](#${heading ? heading : this.valueOf()})`
       },
+      
       // h1: function (){ 
       //    return `# ${this.valueOf()}`
       // },

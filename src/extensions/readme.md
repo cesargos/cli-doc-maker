@@ -1,5 +1,4 @@
 # Smarkio - Produto VIDA
-
 ## New Folder
 ### ObterListaParcela HML
 ``` 
@@ -17,11 +16,6 @@
 ``` 
  https://wwws.portoseguro.com.br/apifinanceiro/financeiro/v1/contratos/segunda-via-boleto-ifx-prd?titulo=7011858203&email=raphael.ishak@portoseguro.com.br
 ```
-
-***
-
-
-
 ### Gerar Token Atendimento HML
 ``` 
  https://apihml.portoseguro.com.br/auth/oauth/v2/token

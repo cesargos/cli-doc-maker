@@ -2,9 +2,11 @@
 // to your commands
 module.exports = toolbox => {
   const builderEndpoint = ({ endpoint, document }) => {
-    if ( endpoint && endpoint.item ){
+    if ( endpoint && endpoint.item ){ 
+      document.push('')
       document.push(endpoint.name.h2())
       endpoint.item.forEach(item =>builderEndpoint({endpoint: item, document})  )
+      document.push('','***','','','')
            
     }else{
       const {name, request, response} = endpoint;

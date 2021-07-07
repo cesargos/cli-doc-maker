@@ -77,7 +77,8 @@ module.exports = {
     
     toolbox.markdownOnString();
     const document = [];
-    toolbox.builderEndpoint({ endpoint: collection.obj.item[0] , document })
+    //toolbox.builderEndpoint({ endpoint: collection.obj.item[0] , document })
+    toolbox.builderDoc({ collection: collection.obj, document })
    
     try{
       toolbox.createFileDocument({ document, folder: collection.folder} )
