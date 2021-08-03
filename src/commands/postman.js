@@ -65,11 +65,15 @@ module.exports = {
       collection.obj = JSON.parse(collection.file);
       collection.folder = `${/^\w/.test(collection.path) ? './': ''}${collection.path.replace(/[^/]+$/,'')}`;
       collection.name = collection.path.match(/[^/]+$/)[0];
+      const env_vars = collection.file.match(/\{\{\w+\}\}/g);
+      collection.env_vars  = env_vars && env_vars
+        .reduce((envVars, currentVar)=>envVars.includes(currentVar) ? envVars: [currentVar,...envVars], [])
+        //.map(envVars=>envVars.replace(/[{}]/g,''))
     }catch{
       print.error('Error when trying to parse the file!');
       return
     }
-
+    print.debug(collection.env_vars)
 
     //print.info(collection.item[3])
 
@@ -89,7 +93,7 @@ module.exports = {
       return
 
     }
-    //print.debug(document);
+    // //print.debug(document);
 
   },
 }
