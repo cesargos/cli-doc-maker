@@ -33,6 +33,9 @@ module.exports = toolbox => {
       link: function ({href, title}){ 
         return `[${this.valueOf()}](${href}${title ? ` "${title}"` : ''})`
       },
+      internalLink: function (idLink){ 
+        return `[${this.valueOf()}](#${idLink})`
+      },
       url: function (){ 
         return `<${this.valueOf()}>`
       },

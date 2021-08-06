@@ -2,9 +2,9 @@
 // to your commands
 
 module.exports = toolbox => {
-  const builderEndpoint = ({ endpoint, document }) => {
+  const builderEndpoint = ({ endpoint, document, builderSumary }) => {
     if ( endpoint && endpoint.item ){ 
-      document.push('')
+      document.push(`\n\n<div id='${endpoint.name.replace(/\. .+$/, '')}' />\n\n`);
       document.push(endpoint.name.h1());
       if (endpoint.description)
         document.push(`**Descrição:** ${endpoint.description}`.p()) 
@@ -12,9 +12,10 @@ module.exports = toolbox => {
       document.push('\n***\n\n\n')
            
     }else{
-      const {name, request, response} = endpoint;      
-      document.push(`1. ${name}`.h2());
-      document.push(`**Endpoint:** ${request.url.raw.replace(/\?.*$/,'')}`.p());
+      const {name, request, response} = endpoint;     
+      document.push(`\n\n<div id='${name.replace(/\. .+$/, '')}' />\n\n`);
+      document.push(name.h2());
+      document.push(`**Endpoint:** ${request.url.raw.replace(/\?.*$/,'').codeInline()}`.p());
       document.push(`**Método:** ${request.method}`.p())
       if (request.description)
         document.push(`**Descrição:** ${request.description}`.p());
@@ -61,6 +62,8 @@ module.exports = toolbox => {
         }
           
       }
+      if (builderSumary)
+        document.push("[> Voltar ao Topo <](#top-document)\n\n<br><br>\n\n")
 
  
     }    
