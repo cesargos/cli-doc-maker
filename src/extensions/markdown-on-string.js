@@ -13,7 +13,7 @@ module.exports = toolbox => {
         return `### ${this.valueOf()}`
       },
       p: function (){ 
-        return this.valueOf()
+        return `${this.valueOf()}\n`
       },
       bold: function (){ 
         return `**${this.valueOf()}**`
@@ -39,11 +39,14 @@ module.exports = toolbox => {
       codeInline: function (){ 
         return `\`${this.valueOf()}\``
       },
-      code: function (language){ 
-        return `\`\`\` ${language? language : ''}\n ${this.valueOf()}\n\`\`\``
+      code: function (language=''){ 
+        return `\`\`\` ${language}\n ${this.valueOf()}\n\`\`\``
       },
       nav: function (heading){ 
         return `[\`${this.valueOf()}\`](#${heading ? heading : this.valueOf()})`
+      },
+      toggle: function (container=''){ 
+        return `<details>\n<summary>${this.valueOf()}</summary>\n\n\n${container}\n</details>\n\n\n`
       },
       
       // h1: function (){ 
