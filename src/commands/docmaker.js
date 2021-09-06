@@ -1,5 +1,5 @@
 const command = {
-  name: 'doc-maker',
+  name: 'docmaker',
   run: async toolbox => {
     const { print } = toolbox
 

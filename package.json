@@ -1,10 +1,10 @@
 {
-  "name": "doc-maker",
+  "name": "docmaker",
   "version": "0.0.1",
-  "description": "doc-maker CLI",
+  "description": "docmaker CLI",
   "private": true,
   "bin": {
-    "doc-maker": "bin/doc-maker"
+    "doc-maker": "bin/docmaker"
   },
   "scripts": {
     "format": "prettier --write **/*.{js,json} && standard --fix",
