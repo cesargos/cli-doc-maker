@@ -30,6 +30,6 @@ A partir de uma collection do Postman é possível criar uma documenação "Read
 No seu terminal execute
 
 ```
-npm install docmaker -g
+npm install documentation-maker -g
 ```
 
