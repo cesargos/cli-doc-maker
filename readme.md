@@ -20,10 +20,10 @@ A partir de uma collection do Postman é possível criar uma documenação "Read
  
 # Execução
 1. No terminal. Entre na pasta raiz do seu projeto (na qual possui as collections nas pastas internas)
-2. rode o comando `docmaker postman` ou `docmaker p`
+2. rode o comando `doc-maker postman` ou `doc-maker p`
 3. Caso tenha mais de uma collection dentro da pasta atual. Selecionar a desejada para a criação da documentação
   - Se preferir pode passar o nome da collection junto com o comando (sintaxe shell). Ex:
-  `docmaker p "nomedoc*"`
+  `doc-maker p "nomedoc*"`
 4. O documento será criado no mesmo local da collection selecionada. Caso ja exista o arquivo "readme.md", ele irá perguntar se deseja sobrescrever ou gerar um novo (usando timestamp para renomear)
 
 # Instalação 
