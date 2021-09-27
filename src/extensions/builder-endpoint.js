@@ -34,7 +34,7 @@ module.exports = toolbox => {
                       "Mensagem_2"
                   ]
               },
-              result_variable: `api_${name.replace(/^(\d+\.)+/, '').trim().replace(/\s+/g,'_').replace(/\W+/g,'').replace(/_{2,}/g,'')}`
+              result_variable: `api_${name.replace(/^(\d+\.)+/, '').trim().replace(/\s+/g,'_').replace(/\W+/g,'').replace(/_{2,}/g,'_')}`
           }
       ]
 
@@ -68,7 +68,7 @@ module.exports = toolbox => {
           : `<? $${optional ? 'opcional_':''}${description ? description.trim().replace(/-opt|-fixed/g, '').replace(/\s+/g, '_').replace(/\W/g,'') : value} ?>`;
 
       
-          return `${key}|${optional ? 'Não' : 'Sim'}|${description.replace(/-opt/,'')}` 
+          return `${key}|${optional ? 'Não' : 'Sim'}|${description.replace(/-opt/g,'').replace(/^.*?-fixed.*$/g,`Parâmetro Fixo: ${value}`)}` 
         });
   
 
@@ -84,10 +84,28 @@ module.exports = toolbox => {
 
       if (request.body && request.body.mode) {
         const {body:{ mode }} = request;
-        document.push(`**Query Body Type:** ${ mode }`.p())
+        document.push(`**Body Params Type:** ${ mode }`.p());
         
         if (mode === "raw" && typeof request.body[mode] === "string" && request.body[mode].trim().length > 0){
+
+          //verifica se tem alguma request de descrição nos "save response"
+          const bodyDescription = response && response.length > 0 && response.find(({ name })=>/^\s*-[dD]\s*$/.test(name));
+          console.log('\n\nbodyDescription Aqui\n')
+          console.log(bodyDescription && bodyDescription.originalRequest && bodyDescription.originalRequest.body )
+          console.log('\nfim\n')
+          if (
+            bodyDescription 
+            && bodyDescription.originalRequest 
+            && bodyDescription.originalRequest.body 
+            && bodyDescription.originalRequest.body[bodyDescription.originalRequest.body.mode] 
+            && typeof bodyDescription.originalRequest.body[bodyDescription.originalRequest.body.mode] === "string"
+          ) 
+            document.push("Body Params Description".h3(), bodyDescription.originalRequest.body[bodyDescription.originalRequest.body.mode].code());
+
+
+          // Cria o exemplo de body
           try{
+
             let body = JSON.stringify(JSON.parse(request.body[mode].trim()), null, 2);
             altuExample[0].parameters.config.data = JSON.parse(request.body[mode].trim());
             document.push(
@@ -104,28 +122,35 @@ module.exports = toolbox => {
           
       }
 
+
+      //Se flag "buiderForAltu" for setada ele vai criar o exemplo de uso no ALTU
       if(builderForAltu){ 
         document.push("Exemplo de uso no Builder".toggle(JSON.stringify(altuExample, null, 2 ).code("json")) );
       }
 
+
+      //titulo dos responses dos "save reponse" do postman
       if (response.length > 1)
-        document.push('Exemplo de requisições'.h2())
+        document.push('Exemplos de requisições'.h2())
       else if (response.length > 0)
         document.push('Exemplo de requisição'.h2())
 
-      response.forEach(({ name, status, code, body })=>{
 
-        if(typeof body === "object" && body != null){
-          const content = `\n\n**Status:** ${status} - **Code:** ${code}\n\n\n${body[body.mode].code()}\n\n`;
-          document.push(name.toggle(content))   
-        }else if (typeof body === "string"){
-          const content = `\n**Status:** ${status} - **Code:** ${code}\n\n\n${body.code()}\n\n`;
-          document.push(name.toggle(content))
+      // Cria os toggles com os save responses do postman (caso ele não seja de descrição)
+      response.forEach(({ name, status, code, body })=>{
+        if (!/^\s*-[dD]\s*$/.test(name)){
+          if(typeof body === "object" && body !== null ){
+            const content = `\n\n**Status:** ${status} - **Code:** ${code}\n\n\n${body[body.mode].code()}\n\n`;
+            document.push(name.toggle(content))   
+          }else if (typeof body === "string"){
+            const content = `\n**Status:** ${status} - **Code:** ${code}\n\n\n${body.code()}\n\n`;
+            document.push(name.toggle(content))
+          }
         }
       })
 
 
-
+      //Cria link para voltar ao summario no final do endpoint
       if (builderSumary)
         document.push("\n[> Voltar ao Topo <](#top-document)\n\n<br><br>\n\n")
 
