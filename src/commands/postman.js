@@ -65,34 +65,74 @@ module.exports = {
       collection.obj = JSON.parse(collection.file);
       collection.folder = `${/^\w/.test(collection.path) ? './': ''}${collection.path.replace(/[^/]+$/,'')}`;
       collection.name = collection.path.match(/[^/]+$/)[0];
-      const env_vars = collection.file.match(/\{\{\w+\}\}/g);
+      const env_vars = collection.file.match(/(?<=\{\{).+?(?=\}\})/g);
       collection.env_vars  = env_vars && env_vars
         .reduce((envVars, currentVar)=>envVars.includes(currentVar) ? envVars: [currentVar,...envVars], [])
-        //.map(envVars=>envVars.replace(/[{}]/g,''))
+        .filter(envVar => !/token|auth/i.test(envVar))
     }catch{
       print.error('Error when trying to parse the file!');
       return
     }
-    print.debug(collection.env_vars)
+
+    if (
+      Array.isArray(collection.env_vars) 
+      && collection.env_vars.length > 0
+    ){
+      if (
+        Array.isArray(collection.obj.variable)
+        && collection.obj.variable.length > 0
+      ){
+        if (collection.env_vars.includes('baseURL')){
+
+          collection.baseURL =  collection.obj.variable.reduce((value, envVar)=> envVar.key === 'baseURL' && /^https?:\/\/.+/.test(envVar.value) ? envVar.value : value, false );
+          
+        }
+        const envVars = collection.obj.variable.filter(envVar => envVar.key !== 'baseURL' && collection.env_vars.includes(envVar.key) && envVar.value.trim())
+        collection.env_vars = {};
+        envVars.forEach(envVar => {
+          collection.env_vars[envVar.key]=envVar.value
+        });
+        print.debug(collection.env_vars)
+
+        const multiselect = {
+          type: 'multiselect',
+          name: 'mult',
+          message: 'What are your favorite colors?',
+          choices: ['red', 'blue', 'yellow'],
+          required: true
+        }
+        const retorno = await toolbox.prompt.ask(multiselect)
+        print.debug(retorno)
+      }else{
+        print.warning("WARNING: Collection variables were not found. Please add them to the collection variables and remember to click on \"Persist All\" before exporting the collection.")
+      }
+      
+
+    }
+    //print.debug(collection.env_vars)
+    //print.debug(collection.obj.variable)
+
+
+
 
     //print.info(collection.item[3])
 
    // print.debug(collection)
     
-    toolbox.markdownOnString();
-    const document = [];
-    //toolbox.builderEndpoint({ endpoint: collection.obj.item[0] , document })
-    toolbox.builderDoc({ collection: collection.obj, document })
+    // toolbox.markdownOnString();
+    // const document = [];
+    // //toolbox.builderEndpoint({ endpoint: collection.obj.item[0] , document })
+    // toolbox.builderDoc({ collection: collection.obj, document })
    
-    try{
-      toolbox.createFileDocument({ document, folder: collection.folder} )
+    // try{
+    //   toolbox.createFileDocument({ document, folder: collection.folder} )
 
-    }catch(err){
-      print.error('Error when trying to create the file markdown!');
-      print.muted(err);
-      return
+    // }catch(err){
+    //   print.error('Error when trying to create the file markdown!');
+    //   print.muted(err);
+    //   return
 
-    }
+    // }
     // //print.debug(document);
 
   },
